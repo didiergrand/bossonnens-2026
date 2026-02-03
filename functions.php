@@ -622,36 +622,6 @@ function codex_custom_init() {
 			)
 	   );
 
-	/*register_post_type(
-		'dicasteres',
-			array(
-				'label' => 'Dicastères',
-				'singular_label' => 'Dicastère',
-				'labels' => array(
-					'menu_name' => 'Dicastères',
-					'all_items' => 'Tous les dicastères',
-					'add_new' => 'Ajouter un nouveau dicastère',
-					'add_new_item' => 'Ajouter un nouveau dicastère',
-					'edit_item' => 'Modifier les dicastères',
-					'new_item' => 'Nouveau dicastère',
-					'view_item' => 'Voir les dicastères',
-					'search_items' => 'Rechercher les dicastères',
-					'not_found' => 'Aucun dicastère trouvé',
-					'not_found_in_trash'=> 'Aucun dicastère trouvé dans la corbeille',
-					'parent' => 'Dicastère parent',
-				),
-				'public' => true,
-				'capability_type' => 'post',
-				'supports' => array(
-					'title',
-					'editor',
-					'thumbnail',
-					'custom-fields'
-				),
-				'has_archive' => true,
-				'menu_position' => 6
-			)
-	);*/
 
 	register_taxonomy(
 		'pilier_public_categorie',
@@ -673,28 +643,7 @@ function codex_custom_init() {
 			'hierarchical' => true
 		)
 	);
-	/*register_taxonomy(
-		'dicastere_categorie',
-		'dicastere',
-		array(
-			'label' => 'Catégories',
-			'labels' => array(
-				'name' => 'Catégories',
-				'singular_name' => 'Catégorie',
-				'all_items' => 'Toutes les catégories',
-				'edit_item' => 'Éditer la catégorie',
-				'view_item' => 'Voir la catégorie',
-				'update_item' => 'Mettre à jour la catégorie',
-				'add_new_item' => 'Ajouter une catégorie',
-				'new_item_name' => 'Nouvelle catégorie',
-				'search_items' => 'Rechercher parmi les catégories',
-				'popular_items' => 'Catégories les plus utilisées'
-			),
-			'hierarchical' => true
-		)
-	);*/
 	register_taxonomy_for_object_type( 'pilier_public_categorie', 'pilier_public' );
-	//register_taxonomy_for_object_type( 'dicastere_categorie', 'dicastere' );
 }
 
 add_image_size( 'homepage-thumb', 400, 150, true ); // 300 pixels wide
@@ -778,44 +727,13 @@ if ( function_exists( 'register_sidebar' ) ) {
 			'after_title' => '</h2>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name' => 'Acces rapide',
-			'id' => 'acces_rapide',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-			'after_widget' => '</li>',
-			'before_title' => '<h2 class="offscreen">',
-			'after_title' => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name' => 'Gauche',
-			'id' => 'sidebar_gauche',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-			'after_widget' => '</li>',
-			'before_title' => '<h2 class="offscreen">',
-			'after_title' => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name' => 'Droite',
-			'id' => 'sidebar_droite',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-			'after_widget' => '</li>',
-			'before_title' => '<h2 class="offscreen">',
-			'after_title' => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name' => 'News',
-			'id' => 'news',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-			'after_widget' => '</li>',
-			'before_title' => '<h2 class="offscreen">',
-			'after_title' => '</h2>',
-		)
-	);
+
+	register_sidebar(array(
+		'name'=> 'Contenu du bas 3',
+		'id' => 'bas3',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h2 class="offscreen">',
+		'after_title' => '</h2>',
+	));
 }
