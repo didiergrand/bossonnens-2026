@@ -6188,7 +6188,10 @@ If you like this solution, you might also want to check out the 1.0 version:
 
 #portraits .portrait img, #portraits .portrait .image {
   padding: 0 !important; }
-
+.card{
+  background-color: #f4f4f4;
+  border-radius: 2px;
+}
 .carte_flex {
   display: -webkit-box;
   display: -ms-flexbox;
