@@ -6191,6 +6191,11 @@ If you like this solution, you might also want to check out the 1.0 version:
 .card{
   background-color: #f4f4f4;
   border-radius: 2px;
+  padding: 10px;
+}
+.card p{
+  padding: 0;
+  margin: 0;
 }
 .carte_flex {
   display: -webkit-box;
