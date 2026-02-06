@@ -6717,3 +6717,20 @@ footer#footer {
   cursor: pointer;
   font-size: 0.9rem;
   display: block; }
+
+  #footer-bottom{
+    background-color:#333;
+    padding:16px;
+    color:#fff;
+  }
+  #footer-bottom a{
+    color:#fff;
+      cursor: pointer;
+  }
+  #footer-bottom a:hover{
+    color:#fff;
+    text-decoration:underline;
+  }  
+  .cmplz-btn{
+   bottom: -100px !important;
+  }
